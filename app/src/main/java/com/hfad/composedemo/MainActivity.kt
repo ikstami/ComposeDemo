@@ -49,6 +49,14 @@ fun DemoText(message: String, fontSize: Float) {
     )
 }
 @Composable
+fun DemoText2(message: String, fontSize: Float) {
+    Text(
+        text = message,
+        fontSize = fontSize.sp,
+        fontWeight = FontWeight.Bold
+    )
+}
+@Composable
 fun DemoSlider(sliderPosition: Float, onPositionChange: (Float) -> Unit ) {
     Slider(
         modifier = Modifier.padding(10.dp),
@@ -69,6 +77,7 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         modifier = Modifier.fillMaxSize()
     ) {
         DemoText(message = "Welcome to Compose", fontSize = sliderPosition)
+        DemoText2(message = "esopmoC ot emocleW", fontSize = 20f)
         Spacer(modifier = Modifier.height(150.dp))
         DemoSlider(
             sliderPosition = sliderPosition,
